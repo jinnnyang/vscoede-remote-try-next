@@ -1,0 +1,41 @@
+
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+{
+	"name": "Next.js",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {
+			"HTTP_PROXY": "http://192.168.1.6:7897",
+			"HTTPS_PROXY": "http://192.168.1.6:7897",
+			"ALL_PROXY": "http://192.168.1.6:7897",
+		}
+	},
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"msjsdiag.vscode-react-native",
+				"bradlc.vscode-tailwindcss",
+				"dbaeumer.vscode-eslint",
+				"christian-kohler.path-intellisense",
+				"streetsidesoftware.code-spell-checker",
+				"mhutchie.git-graph"
+			]
+		}
+	},
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pnpm install"
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

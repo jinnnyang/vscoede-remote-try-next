@@ -6,12 +6,7 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"build": {
 		"dockerfile": "Dockerfile",
-		"context": "..",
-		"args": {
-			"HTTP_PROXY": "http://192.168.1.6:7897",
-			"HTTPS_PROXY": "http://192.168.1.6:7897",
-			"ALL_PROXY": "http://192.168.1.6:7897",
-		}
+		"context": ".."
 	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
